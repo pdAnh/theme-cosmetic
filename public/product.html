@@ -2,6 +2,7 @@
 <html>
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vintage-Product</title>
   <link rel="stylesheet" href="/dist/main.css">
   <link rel="stylesheet" href="/dist/font-awesome.min.css">
@@ -10,9 +11,29 @@
   <link href="https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,700,700i&amp;subset=vietnamese" rel="stylesheet">
 </head>
 
-<body>
+<body id="main">
+  <div id="sideNav" class="sidenav">
+    <a href="javascript:void(0)" class="sidebar-item closebtn" onclick="closeNav()">&times;</a>
+    <a class="sidenav-item" href="#">Login/Register</a>
+    <a class="sidenav-item" href="#">wishlist</a>
+    <a class="sidenav-item" href="#">promotion</a>
+    <a class="sidenav-item" href="#">BeautyLink</a>
+    <a class="sidenav-item" href="#">Beauty Journal</a>
+  </div>
   <!-- START HEADER -->
   <header>
+    <div class="sidebar">
+      <button class="btn-sidebar" onclick="openNav()">
+        <i class="fa fa-bars icon-bars" aria-hidden="true"></i>
+      </button>
+      <span class="logo">
+        Sociolla
+      </span>
+      <button class="btn-shopping-cart">
+        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+      </button>
+    </div>
+
     <div>
       <div class="pre-header">
         <!-- START TOPBAR -->
@@ -41,31 +62,26 @@
       </div>
 
       <!-- START HEADER-MENU -->
-      <nav>
-        <div class="nav-wrapper">
-          <div class="logo">
-            Sociolla
-          </div>
-
-          <div class="nav-menu">
-            <span class="nav-item">
-              <a href="/">Login/Register</a>
-            </span>
-            <span class="nav-item">
-              <i class="fa fa-plus" aria-hidden="true"></i>
-              <a href="#">Wish List</a>
-            </span>
-            <span class="nav-item">
-              <a href="#">My Bag (0 Items)</a>
-            </span>
-            <div class="search">
-              <input type="search" placeholder="Search...">
-              <i class="fa fa-search" aria-hidden="true"></i>
-            </div>
-          </div>
-
-
+      <nav class="wrap-navtop">
+        <div class="logo">
+          Sociolla
         </div>
+        <ul class="menu-nav">
+          <li class="nav-item">
+            <a href="/">Login/Register</a>
+          </li>
+          <li class="nav-item">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+            <a href="#">Wish List</a>
+          </li>
+          <li class="nav-item">
+            <a href="#">My Bag (0 Items)</a>
+          </li>
+          <li class="input-search">
+            <input type="search" placeholder="Search...">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </li>
+        </ul>
       </nav>
       <!-- END HEADER-MENU -->
     </div>
@@ -97,9 +113,8 @@
         </li>
       </ul>
     </div>
-
   </header>
-  <!-- END HEADER-->
+  <!-- END HEADER -->
 
   <div class="wrapper">
     <div class="breadcum">
@@ -141,76 +156,51 @@
 
           </div>
         </div>
-        <div class="product-infomation">
-          <div class="product-title">
-            <div>
-              <a href="#">BLP beauty</a>
-              <p>lip coat</p>
-            </div>
-            <img src="/assets/images/magazines/m1.png" />
-          </div>
-
-          <div class="product-price">
-            20.0000
-          </div>
-
-          <div class="product-quantity-wrap">
-            <div class="product-wanted">
-              <div class="product-quantity">
-                <div class="control-label">quantity</div>
-                <div class="input-quantity">
-                  <input type="number" name="quantity" value="1" />
-                </div>
-              </div>
-              <div class="product-selected">
-                <ul>
-                  <li>
-                    <span>Size: 25gr</span>
-                  </li>
-                  <li>
-                    <span>Variant: Strawberry</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="box-card">
+        <div class="product">
+          <div class="product-info">
+            <div class="product-info-name">
               <div>
-                <button class="add-card">
-                  <span>add to bag</span>
-                </button>
+                <h3 class="is-text-md is-margin-5">sk-II</h3>
+                <p class="is-text-sm is-margin-5">Facial Treatment Clear Lotion</p>
               </div>
-              <div class="wish-lish">
-                <a href="#" class="add-wishlist">
-                  <span>
-                    <i class="fa fa-plus"></i>
-                    Add to Wishlist
-                  </span>
-                </a>
-              </div>
+              <img class="img-branch" src="/assets/images/magazines/m1.png" />
+            </div>
+            <div class="product-info-price">
+              <h4 class="is-text-md is-margin-5 price">$3000</h4>
+              <h5 class="is-text-sm is-margin-5 price-save">save -35%</h5>
+              <h5 class="is-text-sm is-margin-5 price-unsave">$1000</h5>
             </div>
           </div>
-
-          <div class="product-size">
-            <div class="control-label">Size:</div>
-            <ul>
-              <li>
-                <a href="#">5/box</a>
-              </li>
-              <li>
-                <a href="#">single piece</a>
-              </li>
-            </ul>
+          <div class="product-info-card">
+            <div class="quantity-wrap">
+              <div class="is-float-left">
+                <p class="is-margin-5 is-text-sm">Size:</p>
+                <input class="quantity-input is-margin-5" type="number" />
+                <p class="is-margin-5 is-text-sm">Size: 160ml</p>
+              </div>
+              <div class="is-float-right is-text-center is-text-sm">
+                <div class="is-button-danger btn-cart">
+                  ADD TO CART
+                </div>
+                <a href="#" class="wishlist is-margin-15">Add To List</a>
+              </div>
+            </div>
+            <div class="is-margin-5">
+              <p class="is-text-sm">Size:</p>
+              <ul class="size-list">
+                <li class="size-item">160ml</li>
+                <li class="size-item">230ml</li>
+              </ul>
+            </div>
+            <div class="product-share">
+              <p class="is-margin-5 is-text-sm">Share:</p>
+              <span>
+                <i class="icon-share fa fa-facebook"></i>
+                <i class="icon-share fa fa-twitter"></i>
+                <i class="icon-share fa fa-pinterest"></i>
+              </span>
+            </div>
           </div>
-
-          <div class="product-share">
-            <p>Share:</p>
-            <span>
-              <i class="icon-share fa fa-facebook"></i>
-              <i class="icon-share fa fa-twitter"></i>
-              <i class="icon-share fa fa-pinterest"></i>
-            </span>
-          </div>
-
           <div class="product-details">
             <div class="tabs">
               <button id="defaultOpen" onclick="selectTab(event, 'details')" class="tablinks">details</button>
@@ -259,8 +249,9 @@
               <label for="post-2" class="read-more-trigger"></label>
             </div>
           </div>
-
         </div>
+
+
       </div>
     </section>
   </div>
@@ -388,6 +379,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.3/owl.carousel.min.js"></script>
   <script src="/assets/js/product.js" type="text/javascript"></script>
   <script>
+    function openNav() {
+      document.getElementById("sideNav").style.width = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("sideNav").style.width = "0px";
+    }
     function selectTab(evt, tabName) {
       var i, tabcontent, tablinks;
       tabcontent = document.getElementsByClassName("tabcontent");

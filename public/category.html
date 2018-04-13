@@ -1,16 +1,635 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <title>Vintage-Category</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vintage-Product</title>
   <link rel="stylesheet" href="/dist/main.css">
   <link rel="stylesheet" href="/dist/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.3/assets/owl.carousel.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.3/assets/owl.theme.default.css">
   <link href="https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,700,700i&amp;subset=vietnamese" rel="stylesheet">
 </head>
 
-<body>
+<body id="main">
+  <div id="sideNav" class="sidenav">
+    <a href="javascript:void(0)" class="sidebar-item closebtn" onclick="closeNav()">&times;</a>
+    <a class="sidenav-item" href="#">Login/Register</a>
+    <a class="sidenav-item" href="#">wishlist</a>
+    <a class="sidenav-item" href="#">promotion</a>
+    <a class="sidenav-item" href="#">BeautyLink</a>
+    <a class="sidenav-item" href="#">Beauty Journal</a>
+  </div>
+  <!-- START HEADER -->
+  <header>
+    <div class="sidebar">
+      <button class="btn-sidebar" onclick="openNav()">
+        <i class="fa fa-bars icon-bars" aria-hidden="true"></i>
+      </button>
+      <span class="logo">
+        Sociolla
+      </span>
+      <button class="btn-shopping-cart">
+        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div>
+      <div class="pre-header">
+        <!-- START TOPBAR -->
+        <div class="navbar">
+          <div class="container-navbar">
+            <div class="nav-menu">
+              <span class="nav-item">
+                <a href="#">Sociolla</a>
+              </span>
+              <span class="nav-item">
+                <a href="#">BeautyLink</a>
+              </span>
+              <span class="nav-item">
+                <a href="#">Beauty Journal</a>
+              </span>
+            </div>
+            <div class="nav-contract">
+              <i class="fa fa-phone icon-phone" aria-hidden="true"></i>
+              <span class="contract-text">Customer Service (021)5080 6418
+                <i class="fa fa-circle icon-circle" aria-hidden="true"></i>Line: @DUCANH
+              </span>
+            </div>
+          </div>
+        </div>
+        <!-- END TOPBAR -->
+      </div>
+
+      <!-- START HEADER-MENU -->
+      <nav class="wrap-navtop">
+        <div class="logo">
+          Sociolla
+        </div>
+        <ul class="menu-nav">
+          <li class="nav-item">
+            <a href="/">Login/Register</a>
+          </li>
+          <li class="nav-item">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+            <a href="#">Wish List</a>
+          </li>
+          <li class="nav-item">
+            <a href="#">My Bag (0 Items)</a>
+          </li>
+          <li class="input-search">
+            <input type="search" placeholder="Search...">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </li>
+        </ul>
+      </nav>
+      <!-- END HEADER-MENU -->
+    </div>
+
+    <div class="menu">
+      <ul class="nav">
+        <li>
+          <a href="#" target="_self">shop by department</a>
+          <ul>
+            <li>
+              <a href="#" target="_self">makeup</a>
+            </li>
+            <li>
+              <a href="#" target="_self">skin care</a>
+            </li>
+            <li>
+              <a href="#" target="_self">hair care</a>
+            </li>
+            <li>
+              <a href="#" target="_self">nails</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" target="_self">shop by branch</a>
+        </li>
+        <li>
+          <a href="#" target="_self">promotion</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <!-- END HEADER -->
+  <div class="wrapper">
+    <div class="breadcum">
+      <h5>
+        <a href="#">Home</a>
+        <span class="small-gap"> > </span>
+        <a href="#">Shop By Departments</a>
+        <span class="small-gap"> > </span>
+        <a href="#">Makeup</a>
+      </h5>
+    </div>
+
+    <div class="category-wrap">
+
+      <div class="nav-left">
+        <div>
+          <h3 class="heading">Make up</h3>
+
+          <ul class="main-menu">
+            <li>
+              <a id="default" href="#" class="top-level">Face</a>
+              <ul class="sub-menu">
+                <li>
+                  <a href="#">Foundation</a>
+                </li>
+                <li>
+                  <a href="#">Primer</a>
+                </li>
+                <li>
+                  <a href="#">Conclear</a>
+                </li>
+
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="top-level">Face</a>
+              <ul class="sub-menu">
+                <li>
+                  <a href="#">Foundation</a>
+                </li>
+                <li>
+                  <a href="#">Primer</a>
+                </li>
+                <li>
+                  <a href="#">Conclear</a>
+                </li>
+
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="top-level">Face</a>
+              <ul class="sub-menu">
+                <li>
+                  <a href="#">Foundation</a>
+                </li>
+                <li>
+                  <a href="#">Primer</a>
+                </li>
+                <li>
+                  <a href="#">Conclear</a>
+                </li>
+
+              </ul>
+            </li>
+            <li>
+              <a id="default" href="#" class="top-level">Face</a>
+              <ul class="sub-menu">
+                <li>
+                  <a href="#">Foundation</a>
+                </li>
+                <li>
+                  <a href="#">Primer</a>
+                </li>
+                <li>
+                  <a href="#">Conclear</a>
+                </li>
+
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="title">FILTER BY</h3>
+          <h3 class="heading">branch</h3>
+          <form class="search-by-branch">
+            <div class="input-group-filter">
+              <input class="input-filter" type="text" placeholder="Cari brand ...">
+              <span class="fa fa-search icon-search" aria-hidden="true"></span>
+            </div>
+            <div class="table-filter">
+              <table>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="checker">
+                        <input type="checkbox">
+                        <span class="title-branch">
+                          Avene
+                        </span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="checker">
+                        <input type="checkbox">
+                        <span class="title-branch">
+                          Avene
+                        </span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="checker">
+                        <input type="checkbox">
+                        <span class="title-branch">
+                          Avene
+                        </span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="checker">
+                        <input type="checkbox">
+                        <span class="title-branch">
+                          Avene
+                        </span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="checker">
+                        <input type="checkbox">
+                        <span class="title-branch">
+                          Avene
+                        </span>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="wrap-btn-filter">
+              <div class="btn btn-clear">clear</div>
+              <div class="btn btn-filter">filter</div>
+            </div>
+          </form>
+        </div>
+
+        <div>
+          <h3 class="heading">price</h3>
+          <form class="search-by-price" action="">
+            <div class="filter_price_radio">
+              <input type="radio" name="price" value="">
+              <span>ALL PRICES</span>
+            </div>
+            <div class="filter_price_radio">
+              <input type="radio" name="price" value="">
+              <span>SALES</span>
+            </div>
+            <div class="filter_price_radio">
+              <input type="radio" name="price" value="">
+              <span>100-200</span>
+            </div>
+            <div class="filter_price_radio">
+              <input type="radio" name="price" value="">
+              <span>200-300</span>
+            </div>
+            <div class="filter_price_radio">
+              <input type="radio" name="price" value="">
+              <span>300-400</span>
+            </div>
+          </form>
+
+        </div>
+      </div>
+
+      <div class="list-categories">
+        <div class="sort-pagging-bar">
+          <div class="sort-bar">
+            <form class="sort-product">
+              <label>sort by</label>
+              <select class="selectSortProduct">
+                <option value="position:asc" selected="selected">--</option>
+                <option value="name:asc">Product Name: A to Z</option>
+                <option value="name:desc">Product Name: Z to A</option>
+                <option value="date_add:desc">Newest Item</option>
+                <option value="price:asc">Price - Low to High</option>
+                <option value="price:desc">Price - High to Low</option>
+              </select>
+              <label>show</label>
+              <select>
+                <option value="16" selected="selected">16</option>
+                <option value="32">32</option>
+              </select>
+            </form>
+          </div>
+          <div class="pagging-bar">
+            <p>1 - 16 of 25 items</p>
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">&raquo;</a>
+          </div>
+        </div>
+        <div class="list-product-grid">
+          <div class="column">
+            <div class="product-item">
+              <img src="/assets/images/products/prod_1.jpg" />
+              <div class="title">BLP BEAUTY</div>
+              <div class="description">Lip coat</div>
+              <div class="price">$ 5.00</div>
+              <div class="view-prod">
+                <a href="#" class=" btn btn-quick-view">quick view</a>
+                <a href="#" class=" btn btn-view-detail">view details</a>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="product-item">
+              <img src="/assets/images/products/prod_1.jpg" />
+              <div class="title">BLP BEAUTY</div>
+              <div class="description">Lip coat</div>
+              <div class="price">$ 5.00</div>
+              <div class="view-prod">
+                <a href="#" class=" btn btn-quick-view">quick view</a>
+                <a href="#" class=" btn btn-view-detail">view details</a>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="product-item">
+              <img src="/assets/images/products/prod_1.jpg" />
+              <div class="title">BLP BEAUTY</div>
+              <div class="description">Lip coat</div>
+              <div class="price">$ 5.00</div>
+              <div class="view-prod">
+                <a href="#" class=" btn btn-quick-view">quick view</a>
+                <a href="#" class=" btn btn-view-detail">view details</a>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="product-item">
+              <img src="/assets/images/products/prod_1.jpg" />
+              <div class="title">BLP BEAUTY</div>
+              <div class="description">Lip coat</div>
+              <div class="price">$ 5.00</div>
+              <div class="view-prod">
+                <a href="#" class=" btn btn-quick-view">quick view</a>
+                <a href="#" class=" btn btn-view-detail">view details</a>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="product-item">
+              <img src="/assets/images/products/prod_1.jpg" />
+              <div class="title">BLP BEAUTY</div>
+              <div class="description">Lip coat</div>
+              <div class="price">$ 5.00</div>
+              <div class="view-prod">
+                <a href="#" class=" btn btn-quick-view">quick view</a>
+                <a href="#" class=" btn btn-view-detail">view details</a>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="product-item">
+              <img src="/assets/images/products/prod_1.jpg" />
+              <div class="title">BLP BEAUTY</div>
+              <div class="description">Lip coat</div>
+              <div class="price">$ 5.00</div>
+              <div class="view-prod">
+                <a href="#" class=" btn btn-quick-view">quick view</a>
+                <a href="#" class=" btn btn-view-detail">view details</a>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="product-item">
+              <img src="/assets/images/products/prod_1.jpg" />
+              <div class="title">BLP BEAUTY</div>
+              <div class="description">Lip coat</div>
+              <div class="price">$ 5.00</div>
+              <div class="view-prod">
+                <a href="#" class=" btn btn-quick-view">quick view</a>
+                <a href="#" class=" btn btn-view-detail">view details</a>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="product-item">
+              <img src="/assets/images/products/prod_1.jpg" />
+              <div class="title">BLP BEAUTY</div>
+              <div class="description">Lip coat</div>
+              <div class="price">$ 5.00</div>
+              <div class="view-prod">
+                <a href="#" class=" btn btn-quick-view">quick view</a>
+                <a href="#" class=" btn btn-view-detail">view details</a>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="product-item">
+              <img src="/assets/images/products/prod_1.jpg" />
+              <div class="title">BLP BEAUTY</div>
+              <div class="description">Lip coat</div>
+              <div class="price">$ 5.00</div>
+              <div class="view-prod">
+                <a href="#" class=" btn btn-quick-view">quick view</a>
+                <a href="#" class=" btn btn-view-detail">view details</a>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="product-item">
+              <img src="/assets/images/products/prod_1.jpg" />
+              <div class="title">BLP BEAUTY</div>
+              <div class="description">Lip coat</div>
+              <div class="price">$ 5.00</div>
+              <div class="view-prod">
+                <a href="#" class=" btn btn-quick-view">quick view</a>
+                <a href="#" class=" btn btn-view-detail">view details</a>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="product-item">
+              <img src="/assets/images/products/prod_1.jpg" />
+              <div class="title">BLP BEAUTY</div>
+              <div class="description">Lip coat</div>
+              <div class="price">$ 5.00</div>
+              <div class="view-prod">
+                <a href="#" class=" btn btn-quick-view">quick view</a>
+                <a href="#" class=" btn btn-view-detail">view details</a>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="product-item">
+              <img src="/assets/images/products/prod_1.jpg" />
+              <div class="title">BLP BEAUTY</div>
+              <div class="description">Lip coat</div>
+              <div class="price">$ 5.00</div>
+              <div class="view-prod">
+                <a href="#" class=" btn btn-quick-view">quick view</a>
+                <a href="#" class=" btn btn-view-detail">view details</a>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="product-item">
+              <img src="/assets/images/products/prod_1.jpg" />
+              <div class="title">BLP BEAUTY</div>
+              <div class="description">Lip coat</div>
+              <div class="price">$ 5.00</div>
+              <div class="view-prod">
+                <a href="#" class=" btn btn-quick-view">quick view</a>
+                <a href="#" class=" btn btn-view-detail">view details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sort-pagging-bar is-float-right">
+          <div class="pagging-bar">
+            <p>1 - 16 of 25 items</p>
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">&raquo;</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer-wrapper">
+      <div class="footer-column">
+        <div class="footer-column--title">
+          our products
+        </div>
+
+        <div class="footer-column--content">
+          <ul>
+            <li>
+              <a href="#">makeup</a>
+            </li>
+            <li>
+              <a href="#">skin care</a>
+            </li>
+            <li>
+              <a href="#">hair care</a>
+            </li>
+            <li>
+              <a href="#">nails</a>
+            </li>
+            <li>
+              <a href="#">bath & body</a>
+            </li>
+            <li>
+              <a href="#">accessories</a>
+            </li>
+            <li>
+              <a href="#">fragrance</a>
+            </li>
+            <li>
+              <a href="#">gift set</a>
+            </li>
+            <li>
+              <a href="#">men</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <div class="footer-column--title">
+          information
+        </div>
+
+        <div class="footer-column--content">
+          <ul>
+            <li>
+              <a href="#">about us</a>
+            </li>
+            <li>
+              <a href="#">contract us</a>
+            </li>
+            <li>
+              <a href="#">careers</a>
+            </li>
+            <li>
+              <a href="#">PRIVACY POLICY</a>
+            </li>
+            <li>
+              <a href="#">TERMS & CONDITIONS</a>
+            </li>
+            <li>
+              <a href="#">SECURITY POLICY</a>
+            </li>
+            <li>
+              <a href="#">PAYMENT CONFIRMATION</a>
+            </li>
+            <li>
+              <a href="#">AFFILIATE WITH US</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <div class="footer-column--title">
+          payment option
+        </div>
+
+        <div class="footer-column--content">
+          <i class="fa fa-paypal" aria-hidden="true"></i>
+          <i class="fa fa-cc-visa" aria-hidden="true"></i>
+          <i class="fa fa-cc-mastercard" aria-hidden="true"></i>
+          <i class="fa fa-cc-stripe" aria-hidden="true"></i>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <div class="footer-column--title">
+          SUBSCRIBE AND GET FREE VOUCHER 20%
+        </div>
+
+        <div class="footer-column--content">
+          <div class="input-group">
+            <input class="same-default-btn" type="text" placeholder="Enter your email">
+            <span class="input-group-btn">
+              <button type="submit" class="default-btn">
+                <span>Subscribe</span>
+              </button>
+            </span>
+          </div>
+        </div>
+
+        <div>
+          <p>FIND US ON</p>
+          <span>
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-tumblr"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-pinterest"></i>
+            <i class="fa fa-instagram"></i>
+          </span>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+  <script>
+    var acc = document.getElementsByClassName("top-level");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+
+    document.getElementById("default").click();
+  </script>
 
 </body>
 

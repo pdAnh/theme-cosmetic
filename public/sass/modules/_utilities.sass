@@ -19,10 +19,28 @@ $border-color: rgb(217, 217, 217)
 // Responsiveness
 // 960, 1152, and 1344 have been chosen because they are divisible by both 12 and 16
 $max-width: 980px
-$tablet: 769px
+
+$mobile-width: 600px
+
+$tablet-width: 768px
 // 960px container + 40px
-$desktop: 1000px
+$desktop-width: 1024px
 // 1152px container + 40
-$widescreen: 1192px
+$widescreen-width: 2560px
 // 1344px container + 40
-$fullhd: 1384px
+$fullhd-width: 1440px
+
+@mixin mobile
+  @media screen and(max-width: #{$mobile-width})
+    @content
+    
+@mixin tablet
+  @media (max-width: #{$tablet-width})
+    @content
+
+@mixin desktop 
+  @media (min-width: #{$desktop-width}) and (max-width: #{$widescreen-width})
+    @content
+
+
+  

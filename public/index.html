@@ -2,6 +2,7 @@
 <html>
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vintage-Home</title>
   <link rel="stylesheet" href="/dist/main.css">
   <link rel="stylesheet" href="/dist/font-awesome.min.css">
@@ -10,9 +11,31 @@
   <link href="https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,700,700i&amp;subset=vietnamese" rel="stylesheet">
 </head>
 
-<body>
+<body id="main">
+  <div id="sideNav" class="sidenav">
+    <a href="javascript:void(0)" class="sidebar-item closebtn" onclick="closeNav()">&times;</a>
+    <a class="sidenav-item" href="#">Login/Register</a>
+    <a class="sidenav-item" href="#">wishlist</a>
+    <a class="sidenav-item" href="#">promotion</a>
+    <a class="sidenav-item" href="#">BeautyLink</a>
+    <a class="sidenav-item" href="#">Beauty Journal</a>
+  </div>
   <!-- START HEADER -->
   <header>
+    <div class="sidebar">
+      <button class="btn-sidebar" onclick="openNav()">
+        <i class="fa fa-bars icon-bars" aria-hidden="true"></i>
+      </button>
+      <span class="logo">
+        Sociolla
+      </span>
+      <button class="btn-shopping-cart">
+        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+      </button>
+    </div>
+
+
+
     <div>
       <div class="pre-header">
         <!-- START TOPBAR -->
@@ -41,31 +64,26 @@
       </div>
 
       <!-- START HEADER-MENU -->
-      <nav>
-        <div class="nav-wrapper">
-          <div class="logo">
-            Sociolla
-          </div>
-
-          <div class="nav-menu">
-            <span class="nav-item">
-              <a href="/">Login/Register</a>
-            </span>
-            <span class="nav-item">
-              <i class="fa fa-plus" aria-hidden="true"></i>
-              <a href="#">Wish List</a>
-            </span>
-            <span class="nav-item">
-              <a href="#">My Bag (0 Items)</a>
-            </span>
-            <div class="search">
-              <input type="search" placeholder="Search...">
-              <i class="fa fa-search" aria-hidden="true"></i>
-            </div>
-          </div>
-
-
+      <nav class="wrap-navtop">
+        <div class="logo">
+          Sociolla
         </div>
+        <ul class="menu-nav">
+          <li class="nav-item">
+            <a href="/">Login/Register</a>
+          </li>
+          <li class="nav-item">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+            <a href="#">Wish List</a>
+          </li>
+          <li class="nav-item">
+            <a href="#">My Bag (0 Items)</a>
+          </li>
+          <li class="input-search">
+            <input type="search" placeholder="Search...">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </li>
+        </ul>
       </nav>
       <!-- END HEADER-MENU -->
     </div>
@@ -98,7 +116,8 @@
       </ul>
     </div>
   </header>
-  <!-- END HEADER-->
+  <!-- END HEADER -->
+
   <!-- START CAROUSEL -->
   <div class="owl-carousel banner-carousel">
     <img class="item" src="http://via.placeholder.com/350x150" data-src="/assets/images/banners/banner1.jpg" />
@@ -108,9 +127,8 @@
   </div>
   <!-- END CAROUSEL -->
 
-
+  <!-- START BODY-->
   <div class="wrapper">
-
     <section class="collection">
       <div class="cms-info_list">
         <div class="cms-info">
@@ -263,77 +281,80 @@
       </div>
     </section>
 
-    <div class="background-exclusive">
-      <section class="collection">
-        <div class="section-wrapper">
-          <div class="header">Sociolla Exclusive </div>
-          <div class="collection-list">
-            <div class="collection-item">
-              <img src="/assets/images/exclusive/ex_1.jpg" />
-            </div>
-            <div class="collection-item">
-              <img src="/assets/images/exclusive/ex_2.jpg" />
-            </div>
-            <div class="collection-item">
-              <img src="/assets/images/exclusive/ex_3.jpg" />
-            </div>
+    <section class="collection">
+      <div class="section-wrapper">
+        <div class="header">Sociolla Exclusive </div>
+        <div class="owl-carousel owl-theme ok">
+          <div class="collection-item">
+            <img src="/assets/images/exclusive/ex_1.jpg" />
+          </div>
+          <div class="collection-item">
+            <img src="/assets/images/exclusive/ex_2.jpg" />
+          </div>
+          <div class="collection-item">
+            <img src="/assets/images/exclusive/ex_3.jpg" />
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
 
     <section class="collection">
       <div class="section-wrapper">
         <div class="header">Beauty Journal</div>
         <div class="title">YOUR DAILY DOSE OF ALL THINGS BEAUTY</div>
-        <div class="collection-list">
-          <ul>
-            <li>
-              <a href="#">
-                <img src="/assets/images/magazines/m1.png" />
-              </a>
+        <div class="journal-list">
+          <div class="journal-item">
+            <img class="journal-img" src="/assets/images/magazines/m1.png" />
+            <div class="journal-content">
               <h3>
-                <a href="#">Cara Mudah Mencegah Foundation Tampak Patchy Akibat K...</a>
+                <a href="#" class="title">Mengenal Namu Life Snailwhite, Kometik Populer Asal</a>
               </h3>
-              <div>
-                <p>
-                  <img src="/assets/images/logo_bj_new.jpg" />
-                </p>
-                <h5>2 APRIL 2018
-                  <br/> DEVINA ELLORA</h5>
-                <p>Yuk, intip bagaimana sih cara mudah mencegah foundation yang patchy akibat kulit kering agar tampilan Anda
-                  selalu flawless dan oke setiap harinya!</p>
+              <div class="info-content">
+                <img src="/assets/images/logo_bj_new.jpg" />
+                <div>
+                  <span>2 APRIL 2018</span>
+                  </br>
+                  <span>DEVINA ELLORA</span>
+                </div>
               </div>
-              <p>
+              <div class="content-excerpts">Yuk, intip bagaimana sih cara mudah mencegah foundation yang patchy akibat kulit kering agar tampilan Anda
+                selalu flawless dan oke setiap harinya!
+              </div>
+              <div class="journal-link">
                 <a href="#">Read more</a>
-              </p>
-            </li>
-            <li>
-              <a href="#">
-                <img src="/assets/images/magazines/m1.png" />
-              </a>
+              </div>
+            </div>
+          </div>
+          <div class="journal-item">
+            <img class="journal-img" src="/assets/images/magazines/m1.png" />
+            <div class="journal-content">
               <h3>
-                <a href="#">Cara Mudah Mencegah Foundation Tampak Patchy Akibat K...</a>
+                <a href="#" class="title">Mengenal Namu Life Snailwhite, Kometik Populer Asal</a>
               </h3>
-              <div>
-                <p>
-                  <img src="/assets/images/logo_bj_new.jpg" />
-                </p>
-                <h5>2 APRIL 2018
-                  <br/> DEVINA ELLORA</h5>
-                <p>Yuk, intip bagaimana sih cara mudah mencegah foundation yang patchy akibat kulit kering agar tampilan Anda
-                  selalu flawless dan oke setiap harinya!</p>
+              <div class="info-content">
+                <img src="/assets/images/logo_bj_new.jpg" />
+                <div>
+                  <span>2 APRIL 2018</span>
+                  </br>
+                  <span>DEVINA ELLORA</span>
+                </div>
               </div>
-              <p>
+              <div class="content-excerpts">Yuk, intip bagaimana sih cara mudah mencegah foundation yang patchy akibat kulit kering agar tampilan Anda
+                selalu flawless dan oke setiap harinya!
+              </div>
+              <div class="journal-link">
                 <a href="#">Read more</a>
-              </p>
-            </li>
-          </ul>
+              </div>
+            </div>
+          </div>
         </div>
+
       </div>
     </section>
   </div>
+  <!-- END BODY-->
 
+  <!-- START FOOTER-->
   <footer class="footer">
     <div class="footer-wrapper">
       <div class="footer-column">
@@ -452,11 +473,22 @@
       </div>
     </div>
   </footer>
+  <!-- END FOOTER-->
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.3/owl.carousel.min.js"></script>
   <script src="/assets/js/index.js" type="text/javascript"></script>
   <script src="/assets/js/lazyload.js" type="text/javascript"></script>
+  <script>
+    function openNav() {
+      document.getElementById("sideNav").style.width = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("sideNav").style.width = "0px";
+    }
+  </script>
 </body>
 
 </html>
