@@ -117,6 +117,8 @@
           position: relative
           float: left
           background-color: $color-white
+          &:hover
+            background-color: #e8e8e8
           a
             display: inline-block
             text-decoration: none
@@ -133,6 +135,66 @@
               font-size: 12px
           &:hover
             background-color: #e8e8e8
+           
+          .branch-list
+            position: initial !important
+            background-color: #fff
+            border-left: 1px solid #f6f6f6
+            border-right: 1px solid #f6f6f6
+            clear: both
+            min-height: 300px
+            max-height: 300px
+            overflow: auto
+            padding: 0.5em 1em 1em 1em
+          .branch-alpha
+            display: block
+            font-size: 1em
+            text-align: left
+            border-bottom: 1px solid 
+            margin: 0px
+            padding: 0px
+            color: $color-text
+            text-transform: uppercase
+          .alpha-group
+            color: #000
+            list-style: none outside none
+            margin: 0
+            padding: 5px 0px
+            width: 100%
+            box-shadow: none
+            overflow: hidden
+            position: initial !important
+            
+          .branch-search
+            background-color: #e8e8e8
+            width: 260px
+            align-items: center
+          .az-index
+            width: 200px
+            margin: auto !important
+            font-size: 1.25em
+            list-style: none outside none
+            margin: 0
+            padding: 0 1em 1em
+            background-color: #e8e8e8
+            li
+              float: left
+              width: auto
+              background-color: #e8e8e8
+              padding: 0.2em 0
+            li a
+              padding: 0px
+              color: $color-text
+              font-weight: 300
+              
+          .branch-search-input
+            width: 200px
+            background-color: $color-white
+            text-align: center
+            align-items: center
+            border: 1px solid #ddd
+            display: flex
+            margin: 10px auto
         ul
           position: absolute
           padding: 0px
@@ -140,22 +202,60 @@
           display: none
         li
           &:hover ul
-            ul
-            display: none
             display: block
             position: absolute
             z-index: 999
           
-        li li
+        li li 
           width: 100%
           text-transform: uppercase
           text-align: left
-          ::after
-            content: "\f105";
-            display: inline-block;
-            font-family: "FontAwesome";
-            padding-right: 0px;
-            float: right;   
+          
+          .fulldrop
+            opacity: 0
+            z-index: 99
+            top: 0
+            visibility: hidden
+            position: absolute
+            list-style: none
+            min-height: 100px
+            text-align: left
+            overflow: hidden
+            left: 100%
+            margin-top: -1px
+            background-color: $color-white
+            display: grid
+            grid-template-columns: auto auto auto auto;
+            width: 845px
+            transition: 0.3s
+            .column
+              width: 100%
+              text-align: left
+              max-width: 220px
+              ul 
+                position: static
+                li 
+                  font-size: 12px
+                  margin-left: 10px
+                  text-align: left
+                  display: block
+                  cursor: pointer
+                  color: $color-text
+                  text-transform: capitalize
+                  &:hover
+                    background-color: $color-white
+                    color: $palette-dark
+                    font-weight: bold
+        li li 
+         
+
+        li li:hover .fulldrop
+            opacity: 1
+            visibility: visible
+            margin-top: 0px
+        
+
+          
 
 .breadcum
   margin: auto

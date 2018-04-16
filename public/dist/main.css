@@ -77,6 +77,9 @@
 .is-margin-5 {
   margin: 5px; }
 
+.is-text-title {
+  text-transform: uppercase; }
+
 .is-text-center {
   text-align: center; }
 
@@ -420,6 +423,8 @@ input.same-default-btn {
           position: relative;
           float: left;
           background-color: #fff; }
+          header .menu .nav li:hover {
+            background-color: #e8e8e8; }
           header .menu .nav li a {
             display: inline-block;
             text-decoration: none;
@@ -436,13 +441,69 @@ input.same-default-btn {
               font-size: 12px; }
           header .menu .nav li:hover {
             background-color: #e8e8e8; }
+          header .menu .nav li .branch-list {
+            position: initial !important;
+            background-color: #fff;
+            border-left: 1px solid #f6f6f6;
+            border-right: 1px solid #f6f6f6;
+            clear: both;
+            min-height: 300px;
+            max-height: 300px;
+            overflow: auto;
+            padding: 0.5em 1em 1em 1em; }
+          header .menu .nav li .branch-alpha {
+            display: block;
+            font-size: 1em;
+            text-align: left;
+            border-bottom: 1px solid;
+            margin: 0px;
+            padding: 0px;
+            color: rgba(0, 0, 0, 0.65);
+            text-transform: uppercase; }
+          header .menu .nav li .alpha-group {
+            color: #000;
+            list-style: none outside none;
+            margin: 0;
+            padding: 5px 0px;
+            width: 100%;
+            box-shadow: none;
+            overflow: hidden;
+            position: initial !important; }
+          header .menu .nav li .branch-search {
+            background-color: #e8e8e8;
+            width: 260px;
+            align-items: center; }
+          header .menu .nav li .az-index {
+            width: 200px;
+            margin: auto !important;
+            font-size: 1.25em;
+            list-style: none outside none;
+            margin: 0;
+            padding: 0 1em 1em;
+            background-color: #e8e8e8; }
+            header .menu .nav li .az-index li {
+              float: left;
+              width: auto;
+              background-color: #e8e8e8;
+              padding: 0.2em 0; }
+            header .menu .nav li .az-index li a {
+              padding: 0px;
+              color: rgba(0, 0, 0, 0.65);
+              font-weight: 300; }
+          header .menu .nav li .branch-search-input {
+            width: 200px;
+            background-color: #fff;
+            text-align: center;
+            align-items: center;
+            border: 1px solid #ddd;
+            display: flex;
+            margin: 10px auto; }
         header .menu .nav ul {
           position: absolute;
           padding: 0px;
           left: 0;
           display: none; }
         header .menu .nav li:hover ul {
-          display: none;
           display: block;
           position: absolute;
           z-index: 999; }
@@ -450,12 +511,45 @@ input.same-default-btn {
           width: 100%;
           text-transform: uppercase;
           text-align: left; }
-          header .menu .nav li li ::after {
-            content: "\f105";
-            display: inline-block;
-            font-family: "FontAwesome";
-            padding-right: 0px;
-            float: right; } }
+          header .menu .nav li li .fulldrop {
+            opacity: 0;
+            z-index: 99;
+            top: 0;
+            visibility: hidden;
+            position: absolute;
+            list-style: none;
+            min-height: 100px;
+            text-align: left;
+            overflow: hidden;
+            left: 100%;
+            margin-top: -1px;
+            background-color: #fff;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            width: 845px;
+            transition: 0.3s; }
+            header .menu .nav li li .fulldrop .column {
+              width: 100%;
+              text-align: left;
+              max-width: 220px; }
+              header .menu .nav li li .fulldrop .column ul {
+                position: static; }
+                header .menu .nav li li .fulldrop .column ul li {
+                  font-size: 12px;
+                  margin-left: 10px;
+                  text-align: left;
+                  display: block;
+                  cursor: pointer;
+                  color: rgba(0, 0, 0, 0.65);
+                  text-transform: capitalize; }
+                  header .menu .nav li li .fulldrop .column ul li:hover {
+                    background-color: #fff;
+                    color: #1b1e2f;
+                    font-weight: bold; }
+        header .menu .nav li li:hover .fulldrop {
+          opacity: 1;
+          visibility: visible;
+          margin-top: 0px; } }
 
 .breadcum {
   margin: auto;
