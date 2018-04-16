@@ -334,5 +334,69 @@
         margin: 0px auto
 
 @include mobile
+  #main
+    transition: margin-left .3s
+  .sidenav
+    height: 100%
+    width: 0px
+    position: fixed
+    z-index: 2
+    top: 0
+    left: 0
+    overflow-x: hidden
+    transition: 0.2s
+    background-color: $palette-dark
+
+    &-item
+      padding: 8px 8px 8px 32px
+      text-decoration: none
+      font-size: 15px
+      color: $color-white
+      display: block
+      transition: 0.01s      
+      text-transform: uppercase
+      
+    &:hover
+      color: $palette-dark
+    .closebtn
+      position: absolute
+      top: 0
+      right: 25px
+      font-size: 36px
+      text-decoration: none
+      color: $color-white
+      
+  header
+    display: block
+    position: relative
+    padding: 0px 10px
+    background-color: $color-white
+    border-bottom: 1px solid #ddd
+    color: $color-text
+    height: 50px
+    .pre-header, .wrap-navtop, .menu
+      display: none !important
+    .sidebar
+      height: 100%
+      display: flex
+      align-items: center
+      .btn
+        &-sidebar
+          position: absolute 
+          color: $color-text
+          font-size: 20px
+          left: 0%
+        &-shopping-cart
+          font-size: 20px
+          position: absolute 
+          color: $color-text
+          right: 0%
+
+      .logo
+        display: block
+        font-weight: 900
+        font-size: 30px
+        margin: 0px auto
+          
   .breadcum
-    display: none
+    display: none  
