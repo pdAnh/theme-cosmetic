@@ -195,7 +195,7 @@
 @include tablet
   .collection 
     .collection-item
-      max-width: 100%
+      max-width: 100% !important
     .journal
       &-link
         a
@@ -241,6 +241,8 @@
   
 @include mobile
   .collection 
+    &-item
+      max-width: 100% !important
     .owl-theme .owl-dots .owl-dot span
       height: 0px
     .journal

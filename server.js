@@ -4,7 +4,7 @@ const bodyParser = require('body-parser')
 
 const server = express()
 
-server.set('port', process.env.PORT || 3030)
+server.set('port', process.env.PORT || 3000)
 server.use(express.static('public'))
 server.use(bodyParser.json())
 server.use(bodyParser.urlencoded({ extended: true }))

@@ -10,7 +10,6 @@ $(document).ready(function () {
     autoplayHoverPause: true,
     lazyload: true,
     smartSpeed: 900,
-    autoHeight: true
   })
   $('.list').owlCarousel({
     items: 5,

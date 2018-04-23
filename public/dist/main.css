@@ -959,7 +959,7 @@ input.same-default-btn {
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .collection .collection-item {
-    max-width: 100%; }
+    max-width: 100% !important; }
   .collection .journal-link a {
     color: #eb3a5f !important;
     text-decoration: none;
@@ -1000,6 +1000,8 @@ input.same-default-btn {
     display: none; } }
 
 @media screen and (min-width: 300px) and (max-width: 767px) {
+  .collection-item {
+    max-width: 100% !important; }
   .collection .owl-theme .owl-dots .owl-dot span {
     height: 0px; }
   .collection .journal-link a {
